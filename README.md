@@ -168,4 +168,5 @@ Never forget to clean up your mess, this stuff costs money
 * Turn off EC2
 * Delete EBS volume
 * Reconfigure RDS to defaults, and then downsize
+
 Now you can do the next migration steps of taking that to a Master which should be specifc to your environment. Good luck!
