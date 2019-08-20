@@ -11,6 +11,7 @@ Basic directions and example scripts to help you migrate a large (>1TB) MySQL Da
 * Its best to avoid database busy times such as billing periods as the data is changing so rapidly as this can cause sync and load issues
 * In our case the current system was in a large single INNODB file, and this also needs to be migrated to file per table, therefore a logical backup is a necessity
 * Some of this is from notes and memory so may not be 100% accurate
+* Switching the slave to master is an exercise for the reader
 
 ## Process Outline
 1. Switch master (and slaves) to binlog_format ROW from default STATEMENT to setup reliable replication
@@ -167,3 +168,4 @@ Never forget to clean up your mess, this stuff costs money
 * Turn off EC2
 * Delete EBS volume
 * Reconfigure RDS to defaults, and then downsize
+Now you can do the next migration steps of taking that to a Master which should be specifc to your environment. Good luck!
